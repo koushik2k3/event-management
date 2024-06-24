@@ -10,7 +10,6 @@
     <div class="container">
         <h1>Event Management</h1>
 
-        <!-- Event Creation Form -->
         <div class="event-form">
             <h2>Create New Event</h2>
             <form id="eventCreationForm">
@@ -24,32 +23,26 @@
             </form>
         </div>
 
-        <!-- Event List -->
         <div class="event-list">
             <h2>Events List</h2>
             <ul id="eventsList">
-                <!-- Existing events will be populated here -->
             </ul>
         </div>
     </div>
 
     <script src="script.js"></script>
     <script>
-        // Sample data for initial display (you can replace this with actual dynamic data)
         const events = [
             { name: "Event 1", date: "2024-07-01" },
             { name: "Event 2", date: "2024-07-15" },
             { name: "Event 3", date: "2024-08-05" }
         ];
 
-        // Function to render events list
         function renderEvents(events) {
             const eventsList = document.getElementById('eventsList');
 
-            // Clear previous list
             eventsList.innerHTML = '';
 
-            // Add each event to the list
             events.forEach(event => {
                 const li = document.createElement('li');
                 li.textContent = `${event.name} - Date: ${event.date}`;
@@ -57,7 +50,6 @@
             });
         }
 
-        // Initial render of events
         renderEvents(events);
     </script>
 </body>
